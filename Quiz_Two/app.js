@@ -27,3 +27,4 @@ function checkGrade(marks,Exam_type){
 }
 
 checkGrade(totalMarks,Type)
+
