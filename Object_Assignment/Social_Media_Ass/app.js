@@ -61,16 +61,41 @@ const users = [
 //3.Calculate Average Likes per User: Reduce the remaining popular posts to a single value representing 
 //the average number of likes per active user across all their popular posts.
 
-function analyzeUsers(users){
-  const dateNow= new Date()
-  let timestamps=[]
-  const datePosted=new Date()
-  //Filter Active Users
-  const activeUsers=users.map((user) => user.posts.map(obj => timestamps.push(obj.timestamp)))
+function analyseUsers(users){
+  const activeUsers=[]
+  const PostsArray=[]
+  const Likes =[]
+  let totaLikes = 0
+  users.map((UserArr) => {
+    PostsArray.push(UserArr.posts)
+    UserArr.posts.map((information) =>{
+      const today =new Date()
+      const dayPosted =new Date(information.timestamp)
+      const dayDiff =(today-dayPosted)/(24*60*60*1000)
+      // console.log(dayDiff)
+      if(dayDiff < 7){
+        activeUsers.push(UserArr.name)
+      }
+    })
+  })
   
-    
-  console.log(timestamps)
-}
-analyzeUsers(users)
+  const filterUsers=activeUsers.filter((user,index) => activeUsers.indexOf(user) === index)
+  console.log(`Active users: ${filterUsers.length}`)
+  console.log(`Active Users are: ${filterUsers}`)
 
-//Ill complete this task
+  // console.log()
+  PostsArray.map((postarr) =>{
+    postarr.map((popularPosts) =>{
+      if(popularPosts.likes > 10){
+        Likes.push(popularPosts.likes)
+        console.log(popularPosts)
+      }
+    })
+  })
+
+  totaLikes=Likes.reduce((prev,next) => prev+next)
+  const aveLikesPerUser =totaLikes/users.length
+  console.log(`Average likes per user is: ${aveLikesPerUser}`)
+
+}
+analyseUsers(users)
