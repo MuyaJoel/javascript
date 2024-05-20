@@ -78,12 +78,12 @@ function analyseUsers(users){
       }
     })
   })
-  
+  console.log(`${activeUsers}`)
   const filterUsers=activeUsers.filter((user,index) => activeUsers.indexOf(user) === index)
   console.log(`Active users: ${filterUsers.length}`)
   console.log(`Active Users are: ${filterUsers}`)
 
-  // console.log()
+  // console.log(PostsArray)
   PostsArray.map((postarr) =>{
     postarr.map((popularPosts) =>{
       if(popularPosts.likes > 10){

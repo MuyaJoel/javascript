@@ -1,39 +1,48 @@
-const books={
-    name:"Things we did",
-    author:"Joel Muya",
-    yearOfPublish:2010,
-    pages:300
-}
+// const books={
+//     name:"Things we did",
+//     author:"Joel Muya",
+//     yearOfPublish:2010,
+//     pages:300
+// }
 
-// console.log(delete books["name"])
-console.log(books)
+// // console.log(delete books["name"])
+// console.log(books)
 
-const library ={
-    Institution:"Laikipia University"
-}
+// const library ={
+//     Institution:"Laikipia University"
+// }
 
-//Inherit properties
+// //Inherit properties
+// Object.setPrototypeOf(books,library)
 
-Object.setPrototypeOf(books, library)
+// function allPropertyNames(book){
+//     const propertyNames=[]
+//     let currentObj=book
+//     while(currentObj){
+//         propertyNames.push(...Object.getOwnPropertyNames(currentObj))
+//         currentObj=Object.getPrototypeOf(currentObj)
+//     }
+//     return propertyNames
 
-function allProperty(obj){
-    const newList =[]
-    let crtObj =obj
-    while(crtObj){
-        newList.push(...Object.getOwnPropertyNames(crtObj))
-        crtObj = Object.getPrototypeOf(crtObj)
-    }
-    return newList
-}
+// }
+// console.log(allPropertyNames(books))
 
-console.log(allProperty(books))
 
-marks=[
-    {Joel:90},
-    {Eliud:89},
-    {John:78}
-]
-marks.map((mark) =>{
-    console.log(mark.Eliud)
-})
+// function rerveseBooksInfo(book){
+//     const revInformation={}
+//     for(const key in book){
+//         if(book.hasOwnProperty(key))
+//             revInformation[book[key]] = key
+//     }
+//     return revInformation
+// }
+// console.log(rerveseBooksInfo(books))
 
+
+// myName='Joel Muya'
+// // myName.String
+// console.log(myName)
+// const revStr=[...myName].reverse().join()
+// console.log(revStr)
+
+// console.log(myName.at(0))

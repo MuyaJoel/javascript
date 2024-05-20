@@ -48,7 +48,7 @@ var library = [
     const readingstatus = Object.keys(library[1])
 
     for(let i=0; i < readingstatus.length;i++){
-        console.log(library[1][readingstatus[i]])
+        console.log(library[0][readingstatus[i]])
     }
 
     //7. Write a JavaScript program that returns a subset of a string.
