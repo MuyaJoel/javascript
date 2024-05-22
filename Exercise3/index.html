@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<style>
+  body , .jumbotron {padding: 30px}
+  .text-giant {font-size:40px}
+</style>
+<body>
+ 
+  <div class="jumbotron">
+    <h2>How much do pies costs</h2>
+    <form>
+ 
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input onchange="Total()" type="text" id="price" name="price" placeholder="price" value="20">
+    </div>
+ 
+    <div class="form-group">
+      <label for="quantity">Quantity</label>
+      <span id="quantity-label" class="label label-primary quantity-label">1</span>
+      <!-- <input type="number" class="form-control" name="quantity" placeholder="quantity" value="1"> -->
+      <input onchange="Total()" id="quantity" type="range" name="quantity" placeholder="quantity" value="1" min="1" max="100" step="1">
+    </div>
+  </form>
+ 
+  <div id="total" class="text-right text-giant total">
+    $0
+  </div>
+ 
+  </div>
+ 
+ 
+  <script>
+    let output = document.querySelector('#total')
+    let label=document.querySelector('#quantity-label')
+    let tot=0
+
+    function Total(){
+      let price =document.querySelector('#price')
+      let quantity =document.querySelector('#quantity')
+
+      label.textContent = quantity.value
+
+      tot = parseInt(price.value)*parseInt(quantity.value)
+
+      output.innerHTML=`$${tot}`
+
+    }
+
+  </script>
+ 
+</body>
+</html>

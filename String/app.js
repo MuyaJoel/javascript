@@ -10,7 +10,7 @@ revStr.map(char => {
 )
 console.log(reverseString)
 
-function revString(string,reverseString){
+function checkPalindrome(string,reverseString){
     if(reverseString==string){
         return `${reverseString} is a Palindrome`
     }else{
@@ -19,4 +19,4 @@ function revString(string,reverseString){
 
 }
 
-console.log(revString(string,reverseString))
+console.log(checkPalindrome(string,reverseString))
