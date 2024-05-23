@@ -156,3 +156,21 @@ function SocialMedia(users){
 }
 
 SocialMedia(users)
+
+// const info=[{id:456,name:"muya"},{id:567,name:"joel"}]
+
+// async function infoFn(data){
+//    return await new Promise((resolve,reject)=>{
+//     data.map((elem)=> resolve(elem))
+//   })
+
+// }
+// infoFn(info)
+// .then((result)=>{
+//   console.log(result)
+// })
+
+// async function num(){
+//   return await 1
+// }
+// num()
