@@ -98,7 +98,7 @@ const datas=[
 
 //Async/Await
 async function datasFunction(dat){
-    try{https://www.rabbitmq.com/tutorials
+    try{
         dat.map((data)=>{
             const container=document.createElement('div')
             wrapper.appendChild(container)
@@ -147,7 +147,7 @@ async function datasFunction(dat){
             
         })
 
-    }catch(error){https://www.rabbitmq.com/tutorials
+    }catch(error){
         return "Error"
     }
 }
