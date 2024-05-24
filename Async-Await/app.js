@@ -98,53 +98,58 @@ const datas=[
 
 //Async/Await
 async function datasFunction(dat){
-    dat.map((data)=>{
-        const container=document.createElement('div')
-        wrapper.appendChild(container)
-        const ul=document.createElement('ul')
-        container.appendChild(ul)
-    
-        //image
-        const image=document.createElement('img')
-        image.src=`${data.imageUrl}`
-        container.appendChild(image)
-    
-        //title
-        const title =document.createElement('li')
-        title.textContent=`${data.title}`
-        container.appendChild(title)
-    
-        //price
-        const price=document.createElement('li')
-        price.textContent=`${data.price}`
-        container.appendChild(price)
-    
-        //date
-        const date=document.createElement('li')
-        date.textContent=`${data.date}`
-        container.appendChild(date)
-    
-        //location
-        const location =document.createElement('li')
-        location.textContent=`${data.location}`
-        container.appendChild(location)
-    
-        //company
-        const company=document.createElement('li')
-        company.textContent=`${data.company}`
-        container.appendChild(company)
-    
-        //button
-        const button=document.createElement('button')
-        button.textContent="Buy Now"
-        button.style.fontSize="15px"
-        button.style.width="100px"
-        button.style.height="30px"
-        button.style.color="white"
-        button.style.backgroundColor="blue"
-        container.appendChild(button)
+    try{https://www.rabbitmq.com/tutorials
+        dat.map((data)=>{
+            const container=document.createElement('div')
+            wrapper.appendChild(container)
+            const ul=document.createElement('ul')
+            container.appendChild(ul)
         
-    })
+            //image
+            const image=document.createElement('img')
+            image.src=`${data.imageUrl}`
+            container.appendChild(image)
+        
+            //title
+            const title =document.createElement('li')
+            title.textContent=`${data.title}`
+            container.appendChild(title)
+        
+            //price
+            const price=document.createElement('li')
+            price.textContent=`${data.price}`
+            container.appendChild(price)
+        
+            //date
+            const date=document.createElement('li')
+            date.textContent=`${data.date}`
+            container.appendChild(date)
+        
+            //location
+            const location =document.createElement('li')
+            location.textContent=`${data.location}`
+            container.appendChild(location)
+        
+            //company
+            const company=document.createElement('li')
+            company.textContent=`${data.company}`
+            container.appendChild(company)
+        
+            //button
+            const button=document.createElement('button')
+            button.textContent="Buy Now"
+            button.style.fontSize="15px"
+            button.style.width="100px"
+            button.style.height="30px"
+            button.style.color="white"
+            button.style.backgroundColor="blue"
+            container.appendChild(button)
+            
+        })
+
+    }catch(error){https://www.rabbitmq.com/tutorials
+        return "Error"
+    }
 }
 datasFunction(datas)
 
