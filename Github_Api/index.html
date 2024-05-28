@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+        .cont1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .cont2{
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="cont1">
+            <h1>GITHUB SEARCH TOOL</h1>
+            <form id="formData" onsubmit="getData(); return false;"  >
+                <input id="data" type="text">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+        <div class="cont2">
+
+        </div>
+    </div>
+    
+    <script src="./app.js"></script>
+    
+</body>
+</html>
