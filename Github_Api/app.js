@@ -1,7 +1,3 @@
-// //https://api.github.com/users/$%7Bquery%7D
-// //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
-
-
 const fetchData= async ()=>{
     
     const data=document.getElementById('data').value
