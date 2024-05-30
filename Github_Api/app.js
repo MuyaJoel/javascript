@@ -1,7 +1,7 @@
 const fetchData= async ()=>{
     
     const data=document.getElementById('data').value
-  
+    const token="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"
 
     const url = await fetch(`https://api.github.com/users/${data}`,{headers: {Authorization: `Bearer ${token}`}})
     try{
