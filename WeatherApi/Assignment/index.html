@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="cont1">
+            <form action="" onclick="displayData(); return false;">
+                <input id="city" type="text" placeholder="Enter city">
+                <input type="submit" value="Search">
+            </form>
+            <p id="timezone"></p>
+            <p id="county"></p>
+        </div>
+        <div class="cont2">
+            <div class="temp">
+                <h2>Temp</h2>
+                <img src="https://thumbs.dreamstime.com/b/smiling-sun-illustration-character-34434947.jpg" alt="">
+                <p id="tempData"></p>
+            </div>
+            <div class="rain">
+                <h2>Rain</h2>
+                <img src="https://images.vexels.me/media/users/3/240046/isolated/preview/e058ed79743e6e59bf6e17a2a9a485b4-raining-clouds-weather.png" alt="">
+                <p id="rainData"></p>
+                <p id="icon"></p>
+            </div>
+            <div class="wind">
+                <h2>Wind</h2>
+                <img src="https://www.shutterstock.com/image-photo/palm-trees-on-windy-day-260nw-353943920.jpg" alt="">
+                <p id="windData"></p>
+            </div>
+        </div>
+        <div class="cont3">
+           
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
